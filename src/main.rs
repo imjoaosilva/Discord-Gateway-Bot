@@ -14,8 +14,6 @@ async fn main() {
     let mut client = Client::create(122879);
 
     client.on("ready", |data: EventsType| match data {
-
-        // bot parameter = Clone of client.user
         EventsType::Ready(bot) => {
             let botdata = bot.unwrap();
             let botuser = botdata.user.clone().unwrap();
